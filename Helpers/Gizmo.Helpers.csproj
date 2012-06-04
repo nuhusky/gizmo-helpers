@@ -54,7 +54,7 @@
     <Compile Include="Routing\RegexConstraint.cs" />
     <Compile Include="Routing\RouteAttribute.cs" />
     <Compile Include="Security\IXSRFSafeRequest.cs" />
-    <Compile Include="Security\TwilioAuthorizeFilter.cs" />
+    <Compile Include="Security\TwilioAuthenticationFilter.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
