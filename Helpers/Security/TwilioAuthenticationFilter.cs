@@ -11,16 +11,14 @@ using System.Web.Mvc;
 namespace Gizmo.Helpers.Security
 {
 
-[AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = true, AllowMultiple = true)]
     public class TwilioAuthentication : AuthorizeAttribute
     {
         protected virtual string GetHashFromRequest(HttpRequestBase request)
-
         {
             return request.Headers.Get("X-Twilio-Signature");
         }
         string GetEncryptionHashFrom(string url)
-
         {
             //Set your string here:
             string appKey = GetAuthToken();
@@ -31,16 +29,15 @@ namespace Gizmo.Helpers.Security
             return Convert.ToBase64String(hash);
 
         }
- 
+
         protected virtual string GetAuthToken()
         {
             return ConfigurationManager.AppSettings["AuthToken"];
 
         }
- 
+
         //Helpers
         private static byte[] GetBytes(string toTransform)
-
         {
             //create the byte[] array here:
             byte[] byteKey = new byte[toTransform.Length];
@@ -51,25 +48,22 @@ namespace Gizmo.Helpers.Security
             return byteKey;
         }
         static IEnumerable<KeyValuePair<string, string>> GetOrderedForm(NameValueCollection form)
-
         {
             Dictionary<string, string> formDictionary = new Dictionary<string, string>();
 
             for (int i = 0; i < form.Count; i++)
                 formDictionary.Add(form.GetKey(i), form.Get(i));
- 
+
             var orderedList = formDictionary.OrderBy(x => x.Key);
 
- 
+
             return orderedList;
         }
- 
-        protected override bool AuthorizeCore(HttpContextBase httpContext)
 
+        protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
             bool isRequestAuthorized = false;
             if (httpContext.Request.Url != null)
-
             {
                 string url = httpContext.Request.Url.ToString();
                 if (httpContext.IsPostNotification)
@@ -79,7 +73,7 @@ namespace Gizmo.Helpers.Security
 
                     url = orderedList.Aggregate(url, (current, keyValuePair) => current + String.Concat(keyValuePair.Key, keyValuePair.Value));
                 }
- 
+
                 string calculatedHash = GetEncryptionHashFrom(url);
 
                 string twilioHash = GetHashFromRequest(httpContext.Request);
