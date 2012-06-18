@@ -44,15 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Guard.cs" />
     <Compile Include="Html\EnumHtmlHelperExtensions.cs" />
     <Compile Include="Html\EnumValueDisplayAttribute.cs" />
     <Compile Include="Html\EnumValueDisplayConverter.cs" />
     <Compile Include="Html\HtmlHelperExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routing\AreaNameResolver.cs" />
+    <Compile Include="Routing\MvcRequestUrlBuilder.cs" />
+    <Compile Include="Routing\MvcUrlRequest.cs" />
+    <Compile Include="Routing\RequestUrlBuilder.cs" />
     <Compile Include="Routing\RoutePriority.cs" />
     <Compile Include="Routing\LeftMatchingRoute.cs" />
     <Compile Include="Routing\RegexConstraint.cs" />
     <Compile Include="Routing\RouteAttribute.cs" />
+    <Compile Include="Routing\UrlHelperExtensions.cs" />
     <Compile Include="Security\IXSRFSafeRequest.cs" />
     <Compile Include="Security\TwilioAuthenticationFilter.cs" />
   </ItemGroup>
