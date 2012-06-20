@@ -3,6 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.Helpers", "Helpers\Gizmo.Helpers.csproj", "{2E5056E5-8985-4C68-86B1-65534894FDF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.RazorTemplating.TemplateContracts", "RazorTemplating\TemplateBodyContracts\Gizmo.RazorTemplating.TemplateContracts.csproj", "{B8B3360A-A11A-441D-8F84-129484EDEFCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.RazorTemplating.TemplateBodyGenerator", "RazorTemplating\TemplateBodyGenerator\Gizmo.RazorTemplating.TemplateBodyGenerator.csproj", "{B2167F13-5B3A-4511-802A-CB78CB96035B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.RazorTemplating.Samples", "RazorTemplating\TemplatesSamples\Gizmo.RazorTemplating.Samples.csproj", "{6DE47215-5F41-4D06-831C-B61483BDDDFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RazorTemplating", "RazorTemplating", "{5A8BA678-A121-474B-A924-984FE02A419C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gizmo.RazorTemplating.TemplateBodyGenerator.Tests", "RazorTemplating\TemplateBodyGenerator\Tests\Gizmo.RazorTemplating.TemplateBodyGenerator.Tests.csproj", "{50F201BD-28E9-4226-AF06-9C92E19AE4A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F7523718-6B82-424E-A31C-8352D1BFE4EC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,8 +30,30 @@ Global
 		{2E5056E5-8985-4C68-86B1-65534894FDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E5056E5-8985-4C68-86B1-65534894FDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E5056E5-8985-4C68-86B1-65534894FDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B3360A-A11A-441D-8F84-129484EDEFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B3360A-A11A-441D-8F84-129484EDEFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B3360A-A11A-441D-8F84-129484EDEFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B3360A-A11A-441D-8F84-129484EDEFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2167F13-5B3A-4511-802A-CB78CB96035B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2167F13-5B3A-4511-802A-CB78CB96035B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2167F13-5B3A-4511-802A-CB78CB96035B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2167F13-5B3A-4511-802A-CB78CB96035B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE47215-5F41-4D06-831C-B61483BDDDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE47215-5F41-4D06-831C-B61483BDDDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE47215-5F41-4D06-831C-B61483BDDDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE47215-5F41-4D06-831C-B61483BDDDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50F201BD-28E9-4226-AF06-9C92E19AE4A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F201BD-28E9-4226-AF06-9C92E19AE4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F201BD-28E9-4226-AF06-9C92E19AE4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F201BD-28E9-4226-AF06-9C92E19AE4A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6DE47215-5F41-4D06-831C-B61483BDDDFD} = {5A8BA678-A121-474B-A924-984FE02A419C}
+		{B2167F13-5B3A-4511-802A-CB78CB96035B} = {5A8BA678-A121-474B-A924-984FE02A419C}
+		{B8B3360A-A11A-441D-8F84-129484EDEFCC} = {5A8BA678-A121-474B-A924-984FE02A419C}
+		{50F201BD-28E9-4226-AF06-9C92E19AE4A0} = {5A8BA678-A121-474B-A924-984FE02A419C}
 	EndGlobalSection
 EndGlobal
