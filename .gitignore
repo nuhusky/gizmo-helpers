@@ -6,4 +6,3 @@
 *.vssscc
 _ReSharper.*/
 packages/
-NuGet.exe
